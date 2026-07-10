@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, viewport-fit=cover">
+<title>株式会社ネオビスタ ｜ Advance Your Dream</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Expanded:wght@600;700;800&family=Archivo:wght@400;500;600&family=Inter:wght@400;500&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#070B16;--ink-2:#0B1120;--line:rgba(232,236,246,.10);
+  --slate:#7C88A6;--slate-2:#9AA6C2;--mist:#E8ECF6;
+  --horizon:#F5C77E;--horizon-hot:#FF9E6D;
+  --safe-b:env(safe-area-inset-bottom,0px);
+}
+*{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html{scroll-behavior:smooth}
+body{
+  background:var(--ink);color:var(--mist);
+  font-family:"Inter","Zen Kaku Gothic New",sans-serif;line-height:1.75;
+  -webkit-font-smoothing:antialiased;overflow-x:hidden;
+}
+a{color:inherit;text-decoration:none}
+.eyebrow{font-family:"Archivo",sans-serif;font-size:10.5px;font-weight:600;letter-spacing:.26em;text-transform:uppercase;color:var(--horizon)}
+.jp{font-family:"Zen Kaku Gothic New",sans-serif}
+.disp{font-family:"Archivo Expanded","Archivo",sans-serif;line-height:1}
+.wrap{padding:0 22px}
+::selection{background:rgba(245,199,126,.28);color:#fff}
+
+/* ===== HEADER ===== */
+header.bar{position:fixed;top:0;left:0;right:0;z-index:60;display:flex;align-items:center;justify-content:space-between;
+  padding:16px 22px;transition:background .35s,border-color .35s;border-bottom:1px solid transparent}
+header.bar.scrolled{background:rgba(7,11,22,.82);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.logo{display:flex;align-items:center;gap:9px;font-family:"Archivo Expanded",sans-serif;font-weight:700;font-size:14px;letter-spacing:.02em}
+.logo .mark{width:18px;height:18px;position:relative}
+.logo .mark::before{content:"";position:absolute;inset:0;border:1.4px solid var(--mist);border-radius:50%}
+.logo .mark::after{content:"";position:absolute;left:2px;right:2px;top:50%;height:1.4px;background:var(--horizon);box-shadow:0 0 8px var(--horizon)}
+.burger{width:40px;height:40px;border:1px solid var(--line);border-radius:3px;background:rgba(255,255,255,.02);position:relative;cursor:pointer}
+.burger span{position:absolute;left:11px;right:11px;height:1.4px;background:var(--mist);transition:.32s}
+.burger span:nth-child(1){top:15px}.burger span:nth-child(2){top:20px}.burger span:nth-child(3){top:25px}
+body.menu-open .burger span:nth-child(1){top:20px;transform:rotate(45deg)}
+body.menu-open .burger span:nth-child(2){opacity:0}
+body.menu-open .burger span:nth-child(3){top:20px;transform:rotate(-45deg)}
+
+/* ===== FULLSCREEN MENU ===== */
+.menu{position:fixed;inset:0;z-index:55;background:linear-gradient(180deg,#05070F,#0A1122);
+  padding:100px 22px 40px;transform:translateY(-100%);transition:transform .5s cubic-bezier(.7,0,.2,1);
+  display:flex;flex-direction:column}
+.menu.open{transform:translateY(0)}
+.menu .mrule{height:1px;background:var(--line);margin-bottom:6px}
+.menu a.m-link{display:flex;align-items:baseline;justify-content:space-between;padding:20px 2px;border-bottom:1px solid var(--line)}
+.menu a.m-link .en{font-family:"Archivo Expanded",sans-serif;font-weight:700;font-size:26px}
+.menu a.m-link .jp{font-size:12px;color:var(--slate)}
+.menu .m-foot{margin-top:auto;display:flex;flex-direction:column;gap:12px}
+.menu .m-cta{text-align:center;background:var(--mist);color:var(--ink);font-family:"Archivo",sans-serif;font-weight:600;
+  letter-spacing:.1em;text-transform:uppercase;font-size:12px;padding:15px;border-radius:2px}
+.menu .m-cta.ghost{background:transparent;color:var(--mist);border:1px solid var(--line)}
+
+/* ===== HERO ===== */
+.hero{position:relative;height:100svh;min-height:600px;overflow:hidden;display:flex;flex-direction:column;justify-content:flex-end;padding-bottom:120px}
+.sky{position:absolute;inset:0;z-index:0;
+  background:
+    radial-gradient(130% 60% at 50% 70%, rgba(255,158,109,.24), rgba(245,199,126,.08) 26%, transparent 52%),
+    linear-gradient(180deg,#05070F 0%,#070B16 40%,#0A1122 66%,#0E1730 100%)}
+.aurora{position:absolute;left:50%;top:68%;transform:translate(-50%,-50%);width:180%;height:180px;z-index:1;
+  background:radial-gradient(60% 100% at 50% 50%, rgba(245,199,126,.34), rgba(255,158,109,.10) 42%, transparent 72%);
+  filter:blur(22px);animation:breathe 9s ease-in-out infinite}
+@keyframes breathe{0%,100%{opacity:.75}50%{opacity:1}}
+.horizon-line{position:absolute;left:0;right:0;top:68%;height:1px;z-index:3;
+  background:linear-gradient(90deg,transparent,rgba(245,199,126,.9) 42%,rgba(255,233,184,1) 50%,rgba(245,199,126,.9) 58%,transparent);
+  box-shadow:0 0 20px 2px rgba(245,199,126,.5)}
+.floor{position:absolute;left:50%;top:68%;transform:translateX(-50%) perspective(240px) rotateX(76deg);transform-origin:top center;
+  width:320%;height:60vh;z-index:2;
+  background-image:
+    repeating-linear-gradient(90deg, rgba(232,236,246,.10) 0 1px, transparent 1px 58px),
+    repeating-linear-gradient(0deg, rgba(232,236,246,.09) 0 1px, transparent 1px 58px);
+  -webkit-mask-image:linear-gradient(180deg,#000,transparent 76%);mask-image:linear-gradient(180deg,#000,transparent 76%);
+  animation:drift 20s linear infinite}
+@keyframes drift{from{background-position:0 0}to{background-position:0 58px}}
+.star{position:absolute;width:2px;height:2px;border-radius:50%;background:#fff;z-index:1}
+.hero-inner{position:relative;z-index:5}
+.hero .eyebrow{margin-bottom:16px;opacity:0;animation:rise .9s .2s forwards}
+.hero h1{font-family:"Archivo Expanded",sans-serif;font-weight:800;font-size:clamp(44px,15vw,64px);line-height:.96;letter-spacing:-.02em;color:#fff}
+.hero h1 span{display:block;overflow:hidden}
+.hero h1 span i{display:block;font-style:normal;transform:translateY(105%);animation:reveal 1s forwards cubic-bezier(.16,.84,.28,1)}
+.hero h1 span:nth-child(1) i{animation-delay:.2s}
+.hero h1 span:nth-child(2) i{animation-delay:.34s;color:var(--horizon)}
+@keyframes reveal{to{transform:translateY(0)}}
+.hero p{margin-top:20px;font-size:14px;color:var(--slate-2);line-height:1.85;max-width:340px;opacity:0;animation:rise 1s .8s forwards}
+@keyframes rise{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+.scroll-cue{position:absolute;left:22px;bottom:104px;z-index:6;display:flex;align-items:center;gap:10px;
+  font-family:"Archivo",sans-serif;font-size:10px;letter-spacing:.24em;text-transform:uppercase;color:var(--slate);opacity:0;animation:rise 1s 1.2s forwards}
+.scroll-cue .bar{width:40px;height:1px;background:var(--slate);position:relative;overflow:hidden}
+.scroll-cue .bar::after{content:"";position:absolute;inset:0;background:var(--horizon);animation:scan 2.4s ease-in-out infinite}
+@keyframes scan{0%{transform:translateX(-100%)}60%,100%{transform:translateX(100%)}}
+
+/* ===== SECTION ===== */
+section.block{padding:88px 0;position:relative}
+.sec-k{margin-bottom:12px}
+.sec-h{font-family:"Archivo Expanded",sans-serif;font-weight:700;font-size:clamp(32px,10vw,44px);line-height:1;letter-spacing:-.02em;margin-bottom:16px}
+.sec-lead{font-size:13.5px;color:var(--slate-2);line-height:1.85;margin-bottom:40px}
+
+/* ===== SERVICES ACCORDION ===== */
+.services{background:linear-gradient(180deg,var(--ink),#080D1B)}
+.acc{border-top:1px solid var(--line)}
+.acc-item{border-bottom:1px solid var(--line)}
+.acc-head{width:100%;background:transparent;border:0;color:inherit;text-align:left;padding:22px 2px;
+  display:flex;align-items:center;gap:14px;cursor:pointer;position:relative}
+.acc-head .idx{font-family:"Archivo",sans-serif;font-size:11px;font-weight:600;color:var(--slate);letter-spacing:.1em}
+.acc-head .tt{flex:1}
+.acc-head .en{font-family:"Archivo Expanded",sans-serif;font-weight:700;font-size:22px;line-height:1.1;letter-spacing:-.01em;transition:color .3s}
+.acc-head .jp{display:block;font-size:11.5px;color:var(--slate);margin-top:3px;letter-spacing:.06em}
+.acc-head .pm{width:24px;height:24px;position:relative;flex:0 0 auto}
+.acc-head .pm::before,.acc-head .pm::after{content:"";position:absolute;background:var(--slate-2);transition:.35s}
+.acc-head .pm::before{left:0;right:0;top:11px;height:1.5px}
+.acc-head .pm::after{top:0;bottom:0;left:11px;width:1.5px}
+.acc-item.open .acc-head .en{color:var(--horizon)}
+.acc-item.open .acc-head .pm::after{transform:scaleY(0)}
+.acc-item.open .acc-head .pm::before{background:var(--horizon)}
+.acc-body{max-height:0;overflow:hidden;transition:max-height .5s cubic-bezier(.4,0,.2,1)}
+.acc-inner{padding:4px 2px 30px}
+.caps{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:24px}
+.caps span{font-size:11.5px;color:var(--slate-2);border:1px solid var(--line);border-radius:100px;padding:6px 12px;background:rgba(255,255,255,.02)}
+.case{border-left:2px solid rgba(245,199,126,.5);padding-left:16px}
+.case .tag{font-family:"Archivo",sans-serif;font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--horizon);margin-bottom:8px}
+.case .client{font-size:11.5px;color:var(--slate);margin-bottom:4px}
+.case h4{font-family:"Zen Kaku Gothic New",sans-serif;font-weight:700;font-size:17px;line-height:1.5;margin-bottom:10px;color:#fff}
+.case p{font-size:13px;color:var(--slate-2);line-height:1.85}
+
+/* ===== RECRUIT ===== */
+.recruit{position:relative;overflow:hidden;padding:96px 0}
+.recruit .sky-glow{position:absolute;inset:0;z-index:0;
+  background:radial-gradient(90% 50% at 80% 116%, rgba(255,158,109,.26), transparent 56%),
+  radial-gradient(70% 40% at 12% -6%, rgba(93,120,190,.16), transparent 60%),linear-gradient(180deg,#080D1B,#0A1122)}
+.recruit .rline{position:absolute;left:0;right:0;bottom:24%;height:1px;background:linear-gradient(90deg,transparent,rgba(245,199,126,.5),transparent);z-index:1}
+.recruit .wrap{position:relative;z-index:2}
+.recruit h2{font-family:"Archivo Expanded",sans-serif;font-weight:800;font-size:clamp(38px,13vw,56px);line-height:1;letter-spacing:-.02em;margin:14px 0 22px}
+.recruit .lead{font-family:"Zen Kaku Gothic New",sans-serif;font-weight:500;font-size:19px;line-height:1.75;margin-bottom:30px}
+.btn{display:inline-flex;align-items:center;gap:11px;font-family:"Archivo",sans-serif;font-weight:600;font-size:12px;
+  letter-spacing:.12em;text-transform:uppercase;color:var(--ink);background:var(--mist);padding:14px 24px;border-radius:2px}
+.btn.ghost{background:transparent;color:var(--mist);border:1px solid var(--line)}
+.btn:active{transform:scale(.97)}
+
+/* ===== COMPANY ===== */
+.company-card{border:1px solid var(--line);border-radius:4px;padding:32px 26px;background:var(--ink-2);position:relative;overflow:hidden}
+.company-card::after{content:"";position:absolute;right:-30px;bottom:-30px;width:130px;height:130px;border-radius:50%;border:1px solid rgba(245,199,126,.22)}
+.company-card h3{font-family:"Archivo Expanded",sans-serif;font-weight:700;font-size:32px;margin:12px 0 12px}
+.company-card p{font-size:13px;color:var(--slate-2);line-height:1.9;margin-bottom:24px}
+.meta{display:flex;gap:34px;margin-bottom:28px}
+.meta .n{font-family:"Archivo Expanded",sans-serif;font-weight:700;font-size:26px;color:#fff}
+.meta .l{font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--slate);font-family:"Archivo",sans-serif;margin-top:3px}
+
+/* ===== NEWS ===== */
+.news-item{display:block;border-top:1px solid var(--line);padding:20px 2px}
+.news-item:last-child{border-bottom:1px solid var(--line)}
+.news-item .date{font-family:"Archivo",sans-serif;font-size:11px;letter-spacing:.12em;color:var(--horizon);margin-bottom:8px}
+.news-item h4{font-size:14.5px;font-weight:500;line-height:1.6;color:var(--mist);display:flex;justify-content:space-between;gap:14px;align-items:baseline}
+.news-item h4 .arw{color:var(--slate);flex:0 0 auto}
+.news-item p{font-size:12.5px;color:var(--slate);margin-top:8px;line-height:1.75}
+
+/* ===== CONTACT ===== */
+.contact{position:relative;overflow:hidden;padding:80px 0 96px;text-align:center;border-top:1px solid var(--line)}
+.contact .glow{position:absolute;left:50%;bottom:-60px;transform:translateX(-50%);width:500px;height:300px;z-index:0;
+  background:radial-gradient(50% 60% at 50% 50%, rgba(245,199,126,.22), transparent 70%);filter:blur(8px)}
+.contact .wrap{position:relative;z-index:2}
+.contact h2{font-family:"Archivo Expanded",sans-serif;font-weight:800;font-size:clamp(36px,12vw,52px);line-height:1;margin:14px 0}
+.contact p{color:var(--slate-2);font-size:13.5px;margin-bottom:26px;line-height:1.8}
+.contact .btns{display:flex;flex-direction:column;gap:12px}
+.contact .btn{justify-content:center}
+
+/* ===== FOOTER ===== */
+footer{background:#05070F;padding:44px 0 116px}
+.foot-logo{font-family:"Archivo Expanded",sans-serif;font-weight:700;font-size:18px;display:flex;align-items:center;gap:10px}
+.foot-name{color:var(--slate);font-size:12px;margin:10px 0 26px}
+.foot-links{display:flex;flex-wrap:wrap;gap:12px 20px;margin-bottom:28px}
+.foot-links a{font-size:12px;color:var(--slate)}
+.foot-bottom{border-top:1px solid var(--line);padding-top:20px}
+.foot-bottom small{font-family:"Archivo",sans-serif;font-size:10.5px;letter-spacing:.1em;color:var(--slate)}
+
+/* ===== STICKY CTA BAR ===== */
+.cta-bar{position:fixed;left:0;right:0;bottom:0;z-index:50;display:flex;gap:1px;
+  background:var(--line);border-top:1px solid var(--line);padding-bottom:var(--safe-b);
+  transform:translateY(120%);transition:transform .45s cubic-bezier(.2,.7,.2,1)}
+.cta-bar.show{transform:translateY(0)}
+.cta-bar a{flex:1;text-align:center;padding:15px 8px;font-family:"Archivo",sans-serif;font-weight:600;font-size:11.5px;
+  letter-spacing:.08em;text-transform:uppercase;background:var(--ink-2);color:var(--mist)}
+.cta-bar a.primary{background:var(--horizon);color:var(--ink)}
+.cta-bar a .jp{display:block;font-size:10px;letter-spacing:.04em;text-transform:none;color:var(--slate);margin-top:2px;font-weight:400}
+.cta-bar a.primary .jp{color:rgba(7,11,22,.6)}
+
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1)}
+.reveal.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}.hero h1 span i{transform:none}}
+</style>
+</head>
+<body id="top">
+
+<header class="bar" id="bar">
+  <a class="logo" href="#top"><span class="mark"></span>NEO&nbsp;VISTA</a>
+  <button class="burger" id="burger" aria-label="メニュー"><span></span><span></span><span></span></button>
+</header>
+
+<nav class="menu" id="menu">
+  <a class="m-link" href="#services"><span class="en">Services</span><span class="jp">サービス</span></a>
+  <a class="m-link" href="#company"><span class="en">Company</span><span class="jp">企業情報</span></a>
+  <a class="m-link" href="#philosophy"><span class="en">Philosophy</span><span class="jp">企業理念</span></a>
+  <a class="m-link" href="#recruit"><span class="en">Recruit</span><span class="jp">採用</span></a>
+  <div class="m-foot">
+    <a class="m-cta" href="#contact">お問い合わせ</a>
+    <a class="m-cta ghost" href="#contact">カジュアル面談を申し込む</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="sky"></div>
+  <div class="floor"></div>
+  <div class="aurora"></div>
+  <div class="horizon-line"></div>
+  <div id="stars"></div>
+  <div class="wrap hero-inner">
+    <div class="eyebrow">Consulting Firm</div>
+    <h1><span><i>Advance</i></span><span><i>Your&nbsp;Dream</i></span></h1>
+    <p class="jp">戦略からテクノロジー実装まで一気通貫でご支援し、その先の新しい視界（ビスタ）へと導くコンサルティングファーム。</p>
+  </div>
+  <div class="scroll-cue"><span class="bar"></span>Scroll</div>
+</section>
+
+<!-- SERVICES -->
+<section class="block services" id="services">
+  <div class="wrap">
+    <div class="eyebrow sec-k reveal">Services</div>
+    <h2 class="sec-h reveal">What&nbsp;We&nbsp;Do</h2>
+    <p class="sec-lead jp reveal">企業のビジネスパフォーマンス最大化をご支援する、4領域のコンサルティングサービス。戦略立案から実装・運用までを横断します。</p>
+
+    <div class="acc reveal">
+      <div class="acc-item open">
+        <button class="acc-head"><span class="idx">01</span><span class="tt"><span class="en">Strategy</span><span class="jp">戦略</span></span><span class="pm"></span></button>
+        <div class="acc-body">
+          <div class="acc-inner">
+            <div class="caps"><span>全社戦略・ポートフォリオ策定</span><span>新規事業立案</span><span>M&Aアドバイザリー</span><span>GX/ESG</span></div>
+            <div class="case">
+              <div class="tag">Case</div><div class="client jp">大手アウトドアメーカー</div>
+              <h4 class="jp">顧客データに基づくマーケティング高度化</h4>
+              <p class="jp">100万人単位の会員データに対し、BI/ETLツールで購買行動・属性・利用金額を分析。LTV最大化を目的とした戦略立案と具体施策の策定まで支援。</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="acc-item">
+        <button class="acc-head"><span class="idx">02</span><span class="tt"><span class="en">Management</span><span class="jp">経営</span></span><span class="pm"></span></button>
+        <div class="acc-body">
+          <div class="acc-inner">
+            <div class="caps"><span>経営計画策定</span><span>KPI/KGI策定</span><span>組織再編・ガバナンス</span><span>PMI</span></div>
+            <div class="case">
+              <div class="tag">Case</div><div class="client jp">大手決済事業者</div>
+              <h4 class="jp">事業運営KPI/KGI策定およびBI構築</h4>
+              <p class="jp">事業分析に基づく重点テーマの特定とKPI・目標値の策定、並びにデータ基盤整備およびBI構築の推進。</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="acc-item">
+        <button class="acc-head"><span class="idx">03</span><span class="tt"><span class="en">System</span><span class="jp">システム</span></span><span class="pm"></span></button>
+        <div class="acc-body">
+          <div class="acc-inner">
+            <div class="caps"><span>IT戦略/ロードマップ</span><span>BI・データ基盤構築</span><span>AI開発・基盤構築</span><span>アプリ/インフラ開発・PMO</span><span>セキュリティ高度化</span></div>
+            <div class="case">
+              <div class="tag">Case</div><div class="client jp">大手システム開発事業者</div>
+              <h4 class="jp">生成AIを活用した開発業務効率化</h4>
+              <p class="jp">開発におけるAI活用でナレッジ集約とドキュメント作成を自動化。コスト削減・品質均一化・業務効率化を実現。</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="acc-item">
+        <button class="acc-head"><span class="idx">04</span><span class="tt"><span class="en">Operation</span><span class="jp">業務</span></span><span class="pm"></span></button>
+        <div class="acc-body">
+          <div class="acc-inner">
+            <div class="caps"><span>業務立上げ・効率化</span><span>マーケ/調達/物流</span><span>営業/販売</span><span>人事/法務/経理</span></div>
+            <div class="case">
+              <div class="tag">Case</div><div class="client jp">大手タイヤ製造事業者</div>
+              <h4 class="jp">AIを活用した物流業務最適化</h4>
+              <p class="jp">生成AIとPythonで複雑な物流網の最適化シミュレーションを実施。輸配送ルートや納品スケジュールをモデル化し、データに基づく戦略策定を支援。</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- RECRUIT -->
+<section class="recruit" id="recruit">
+  <div class="sky-glow"></div><div class="rline"></div>
+  <div class="wrap">
+    <div class="eyebrow reveal">Recruit</div>
+    <h2 class="reveal">Beyond&nbsp;the<br>Horizon</h2>
+    <p class="lead jp reveal">あなたのスキルと情熱が、<br>新たな価値を生み出す原動力に。</p>
+    <div class="reveal"><a class="btn" href="#contact">Join the team →</a></div>
+  </div>
+</section>
+
+<!-- COMPANY + NEWS -->
+<section class="block" id="company">
+  <div class="wrap">
+    <div class="company-card reveal">
+      <div class="eyebrow">Company</div>
+      <h3 class="disp">About&nbsp;Us</h3>
+      <p class="jp">経営とテクノロジーの両輪で企業の変革を伴走支援。構想から実装までを一気通貫でつなぎ、確かな成果へ導きます。</p>
+      <div class="meta">
+        <div><div class="n disp">4</div><div class="l">Domains</div></div>
+        <div><div class="n disp">360°</div><div class="l">End to End</div></div>
+      </div>
+      <a class="btn ghost" href="#">企業情報を見る →</a>
+    </div>
+
+    <div style="margin-top:64px" id="philosophy">
+      <div class="eyebrow sec-k reveal">News</div>
+      <h2 class="sec-h reveal" style="margin-bottom:24px">Latest</h2>
+      <a class="news-item reveal" href="#">
+        <div class="date">2026.03.25</div>
+        <h4 class="jp">「ハイディールパートナーズ」にて当社が紹介されました<span class="arw">→</span></h4>
+        <p class="jp">ハイクラス層の転職支援で実績を誇る「ハイディールパートナーズ株式会社」にて、当社が紹介されました。</p>
+      </a>
+      <a class="news-item reveal" href="#">
+        <div class="date">2026.01.15</div>
+        <h4 class="jp">生成AI活用支援サービスの提供を開始しました<span class="arw">→</span></h4>
+      </a>
+      <a class="news-item reveal" href="#">
+        <div class="date">2025.11.04</div>
+        <h4 class="jp">キャリア採用のカジュアル面談受付を開始しました<span class="arw">→</span></h4>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="glow"></div>
+  <div class="wrap">
+    <div class="eyebrow">Get in touch</div>
+    <h2 class="disp">Let's&nbsp;Talk</h2>
+    <p class="jp">事業課題のご相談から、キャリア採用のカジュアル面談まで。お気軽にお問い合わせください。</p>
+    <div class="btns">
+      <a class="btn" href="#">お問い合わせ →</a>
+      <a class="btn ghost" href="#">カジュアル面談を申し込む →</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-logo"><span class="logo"><span class="mark"></span></span>NEO&nbsp;VISTA</div>
+    <p class="foot-name jp">株式会社ネオビスタ</p>
+    <div class="foot-links">
+      <a href="#services">サービス</a><a href="#company">企業情報</a><a href="#philosophy">企業理念</a><a href="#recruit">採用</a>
+      <a href="#">プライバシーポリシー</a><a href="#">コンプライアンスポリシー</a><a href="#">カスタマーハラスメントポリシー</a><a href="#">情報セキュリティ基本方針</a><a href="#">サイトマップ</a>
+    </div>
+    <div class="foot-bottom"><small>© Neo Vista inc.</small></div>
+  </div>
+</footer>
+
+<!-- STICKY CTA -->
+<div class="cta-bar" id="ctaBar">
+  <a href="#contact">お問い合わせ<span class="jp">Contact</span></a>
+  <a class="primary" href="#contact">カジュアル面談<span class="jp">受付中 →</span></a>
+</div>
+
+<script>
+const bar=document.getElementById('bar'),cta=document.getElementById('ctaBar');
+addEventListener('scroll',()=>{
+  bar.classList.toggle('scrolled',scrollY>30);
+  cta.classList.toggle('show',scrollY>window.innerHeight*0.6);
+});
+
+// menu
+const burger=document.getElementById('burger'),menu=document.getElementById('menu');
+function toggleMenu(){document.body.classList.toggle('menu-open');menu.classList.toggle('open')}
+burger.addEventListener('click',toggleMenu);
+menu.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{document.body.classList.remove('menu-open');menu.classList.remove('open')}));
+
+// stars
+const sky=document.getElementById('stars');
+for(let i=0;i<28;i++){const s=document.createElement('span');s.className='star';
+  s.style.left=Math.random()*100+'%';s.style.top=Math.random()*60+'%';
+  s.style.opacity=(Math.random()*.5+.15).toFixed(2);
+  s.style.transform=`scale(${(Math.random()*1.1+.4).toFixed(2)})`;sky.appendChild(s);}
+
+// accordion
+document.querySelectorAll('.acc-item').forEach(item=>{
+  const head=item.querySelector('.acc-head'),body=item.querySelector('.acc-body');
+  const set=()=>{body.style.maxHeight=item.classList.contains('open')?body.scrollHeight+'px':'0px'};
+  if(item.classList.contains('open'))requestAnimationFrame(set);
+  head.addEventListener('click',()=>{
+    const isOpen=item.classList.contains('open');
+    document.querySelectorAll('.acc-item').forEach(o=>{o.classList.remove('open');o.querySelector('.acc-body').style.maxHeight='0px'});
+    if(!isOpen){item.classList.add('open');requestAnimationFrame(set)}
+  });
+});
+
+// reveal
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
