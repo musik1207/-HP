@@ -5,128 +5,191 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <title>企業情報 ｜ 株式会社ネオビスタ</title>
 <meta name="description" content="株式会社ネオビスタの企業情報。経営とテクノロジーを融合し、産業の新しいスタンダードを築くプロフェッショナル集団です。">
+<meta property="og:site_name" content="株式会社ネオビスタ">
+<meta property="og:title" content="企業情報 ｜ 株式会社ネオビスタ">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#0A0608">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Archivo+Expanded:wght@600;700;800&family=Archivo:wght@400;500;600&family=Inter:wght@400;500&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Expanded:wght@700;800&family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body id="top">
 
-<header class="site-header">
-  <a class="logo" href="index.html"><span class="mark"></span>NEO&nbsp;VISTA</a>
-  <nav class="nav-desktop">
+<div class="grain"></div>
+<div class="tx enter"></div>
+<div class="progress"></div>
+
+<header class="hd">
+  <a class="brand" href="index.html"><span class="mk"></span>NEO&nbsp;VISTA</a>
+  <nav class="nav">
     <a href="services.html">Services</a>
-    <a href="company.html" class="current">Company</a>
-    <a href="philosophy.html">Philosophy</a>
+    <a href="approach.html">Approach</a>
+    <a href="cases.html">Cases</a>
+    <a href="insights.html">Insights</a>
+    <span class="drop">
+      <a href="company.html" class="on">Company</a>
+      <div class="drop-panel"><ul>
+        <li><a href="company.html">企業情報</a></li>
+        <li><a href="philosophy.html">企業理念</a></li>
+      </ul></div>
+    </span>
     <a href="recruit.html">Recruit</a>
   </nav>
-  <a class="nav-cta" href="contact.html">Contact</a>
-  <button class="burger" aria-label="メニューを開く"><span></span><span></span><span></span></button>
+  <a class="hd-cta" href="contact.html">Contact</a>
+  <button class="burger" aria-label="メニューを開く" aria-expanded="false"><i></i><i></i><i></i></button>
 </header>
+
 <nav class="menu" id="menu">
-  <a class="m-link" href="services.html"><span class="en">Services</span><span class="jp">サービス</span></a>
-  <a class="m-link current" href="company.html"><span class="en">Company</span><span class="jp">企業情報</span></a>
-  <a class="m-link" href="philosophy.html"><span class="en">Philosophy</span><span class="jp">企業理念</span></a>
-  <a class="m-link" href="recruit.html"><span class="en">Recruit</span><span class="jp">採用</span></a>
+  <div class="m-hz"></div>
+  <a class="ml" href="services.html"><span class="en">Services</span><span class="jp">サービス</span></a>
+  <a class="ml" href="approach.html"><span class="en">Approach</span><span class="jp">アプローチ</span></a>
+  <a class="ml" href="cases.html"><span class="en">Cases</span><span class="jp">導入事例</span></a>
+  <a class="ml" href="insights.html"><span class="en">Insights</span><span class="jp">ニュース</span></a>
+  <a class="ml on" href="company.html"><span class="en">Company</span><span class="jp">企業情報</span></a>
+  <a class="ml" href="philosophy.html"><span class="en">Philosophy</span><span class="jp">企業理念</span></a>
+  <a class="ml" href="recruit.html"><span class="en">Recruit</span><span class="jp">採用</span></a>
   <div class="m-foot">
     <a class="m-cta" href="contact.html">お問い合わせ</a>
-    <a class="m-cta ghost" href="contact.html">カジュアル面談を申し込む</a>
+    <a class="m-cta gh" href="contact.html">カジュアル面談を申し込む</a>
   </div>
 </nav>
 
-<section class="page-hero">
-  <div class="vista"><div class="sky"></div><div class="hline"></div><div class="aurora"></div><div class="stars" data-n="26"></div></div>
-  <div class="wrap inner">
-    <div class="crumb"><a href="index.html">Home</a> &nbsp;/&nbsp; Company</div>
-    <h1 class="disp">Company</h1>
-    <div class="jp-title">企業情報</div>
-    <p class="lead jp">テクノロジーの力を信じ、ビジネスへの適応を自ら体現する。私たちは、テック×ビジネス両面のプロフェッショナル集団です。</p>
+<section class="phero">
+  <div class="vista"><div class="sky"></div><div class="glow"></div><div class="hz"></div><div class="stars" data-n="24"></div></div>
+  <div class="wrap in">
+    <div class="crumb"><a href="index.html">Home</a> / <span>Company</span></div>
+    <h1><span class="ln"><span>Company</span></span></h1>
+    <div class="jt">企業情報</div>
+    <p class="pl lead">テクノロジーの力を信じ、ビジネスへの適応を自ら体現する。私たちは、テック×ビジネス両面のプロフェッショナル集団です。</p>
   </div>
 </section>
 
-<!-- MESSAGE -->
-<section class="block" style="padding-top:30px">
+<section class="sec" style="padding-top:clamp(30px,4vw,50px)">
   <div class="wrap">
-    <div class="sec-head reveal">
-      <div class="l"><div class="eyebrow k">Message</div><h2 class="disp">私たちの姿勢</h2></div>
-    </div>
-    <div class="reveal" style="max-width:760px">
-      <p class="jp" style="font-size:clamp(17px,2.2vw,22px);line-height:1.95;color:var(--mist);margin-bottom:24px">単なるツールの導入ではなく、生成AIやDXテクノロジーを自らの手足のように駆使する。それが私たちの流儀です。</p>
-      <p class="jp" style="font-size:15px;line-height:2.05;color:var(--slate-2);margin-bottom:20px">クライアントの本質的な課題解決をお手伝いし、共にビジネスパフォーマンスの最大化を追求し続けます。人海戦術に頼るのではなく、テクノロジーを賢く活用することで、日本の未来はもっと明るく変えていける。私たちはそう信じています。</p>
-      <p class="jp" style="font-size:15px;line-height:2.05;color:var(--slate-2)">この志を共にする仲間とともに、一歩ずつ着実に、産業の新しいスタンダードを築いてまいります。</p>
-    </div>
-  </div>
-</section>
-
-<!-- LEADERSHIP -->
-<section class="block" style="padding-top:0">
-  <div class="wrap">
-    <div class="rule reveal" style="margin-bottom:60px"></div>
-    <div class="sec-head reveal">
-      <div class="l"><div class="eyebrow k">Members</div><h2 class="disp">Leadership</h2></div>
-      <p class="r jp">戦略・業務・システム・データの各領域を、第一線の経験を持つプロフェッショナルが牽引します。</p>
-    </div>
-    <div class="cards c3">
-      <div class="card reveal">
-        <div class="num">01</div>
-        <h3 class="jp">戦略／データ活用経営</h3>
-        <p class="jp">アクセンチュア、プライベートエクイティファンドを複数経て創業。戦略コンサルタントとしての経験に加え、ファンド投資先のバリューアップ経験を踏まえた、データ活用経営のリアルに根ざした案件推進を得意とする。</p>
+    <div class="sh">
+      <div class="l">
+        <div class="k"><span class="mono">Message</span></div>
+        <h2 class="h2" data-split>Our Stance</h2>
       </div>
-      <div class="card reveal">
-        <div class="num">02</div>
-        <h3 class="jp">戦略・業務・システム</h3>
-        <p class="jp">アクセンチュアを経て参画。通信・ハイテク業界を中心に、戦略・業務・システムの各領域で豊富な実績を有す。ビジネスのあるべき姿とテクノロジーが可能にすること、その両面を踏まえた経営／業務改革を得意とする。</p>
-      </div>
-      <div class="card reveal">
-        <div class="num">03</div>
-        <h3 class="jp">データ分析・テクノロジー</h3>
-        <p class="jp">会計系コンサルティングファーム、SIer、国内総合系ファームを経て参画。業界を問わず、データとテクノロジーを活用した改革系プロジェクトのリード経験を有し、データ分析・テクノロジー領域を牽引する。</p>
-      </div>
+    </div>
+    <div style="max-width:780px">
+      <p class="rv" style="font-family:var(--jp);font-size:clamp(18px,2.3vw,26px);line-height:1.85;color:var(--bone);margin-bottom:28px">
+        単なるツールの導入ではなく、生成AIやDXテクノロジーを<br class="d-br">自らの手足のように駆使する。それが私たちの流儀です。
+      </p>
+      <p class="lead rv" data-d="1" style="margin-bottom:20px">ネオビスタは、テクノロジーの力を信じ、ビジネスへの適応を自ら体現するテック×ビジネス両面のプロフェッショナル集団を目指しています。クライアントの本質的な課題解決をお手伝いし、共にビジネスパフォーマンスの最大化を追求し続けること。それが私たちの大切にしていることです。</p>
+      <p class="lead rv" data-d="2">人海戦術に頼るのではなく、テクノロジーを賢く活用することで、日本の未来はもっと明るく変えていける。私たちはこの志を共にする仲間とともに、一歩ずつ着実に、産業の新しいスタンダードを築いてまいります。</p>
     </div>
   </div>
 </section>
 
-<!-- PROFILE -->
-<section class="block" style="padding-top:0">
+<section class="sec sec-tight">
   <div class="wrap">
-    <div class="rule reveal" style="margin-bottom:60px"></div>
-    <div class="sec-head reveal">
-      <div class="l"><div class="eyebrow k">Profile</div><h2 class="disp">会社概要</h2></div>
+    <div class="hz-rule" style="margin-bottom:clamp(50px,6vw,90px)"></div>
+    <div class="sh">
+      <div class="l">
+        <div class="k"><span class="mono">Members</span></div>
+        <h2 class="h2" data-split>Leadership</h2>
+      </div>
+      <p class="r lead">戦略・業務・システム・データの各領域を、第一線の経験を持つプロフェッショナルが牽引します。</p>
     </div>
-    <dl class="profile reveal">
-      <div class="row"><dt>会社名</dt><dd>株式会社ネオビスタ<span class="sub">（Neo Vista inc.）</span></dd></div>
+    <div class="grid c3">
+      <div class="card rv" data-d="1">
+        <div class="no">M—01</div>
+        <h3 class="h3">戦略 / データ活用経営</h3>
+        <p>アクセンチュア、プライベートエクイティファンドを複数経てネオビスタを創業。戦略コンサルタントとしての経験に加え、ファンド投資先のバリューアップの経験値も踏まえた、データ活用経営のリアルを踏まえたコンサルティング案件推進を得意とする。</p>
+      </div>
+      <div class="card rv" data-d="2">
+        <div class="no">M—02</div>
+        <h3 class="h3">戦略 / 業務 / システム</h3>
+        <p>アクセンチュアを経てネオビスタに参画。通信・ハイテク業界を中心に、戦略・業務・システムの各領域において豊富な経験・実績を有す。ビジネスとしてのあるべき姿とテクノロジーが可能とすること、その両面を踏まえたアプローチによる経営／業務改革を得意とする。</p>
+      </div>
+      <div class="card rv" data-d="3">
+        <div class="no">M—03</div>
+        <h3 class="h3">データ分析 / テクノロジー</h3>
+        <p>会計系コンサルティングファーム、SIer、国内総合系コンサルティングファームを経てネオビスタに参画。一貫して、インダストリーにとらわれない、データとテクノロジーを活用した改革系プロジェクトのリード経験を有す。データ分析・テクノロジー領域のリードを務める。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec sec-tight">
+  <div class="wrap">
+    <div class="hz-rule" style="margin-bottom:clamp(50px,6vw,90px)"></div>
+    <div class="sh">
+      <div class="l">
+        <div class="k"><span class="mono">Profile</span></div>
+        <h2 class="h2" data-split>Company Profile</h2>
+      </div>
+    </div>
+    <dl class="prof rv">
+      <div class="row"><dt>会社名</dt><dd>株式会社ネオビスタ<span class="s">Neo Vista inc.</span></dd></div>
       <div class="row"><dt>設立</dt><dd>2024年11月</dd></div>
-      <div class="row"><dt>ミッション</dt><dd>Advance The Dream</dd></div>
-      <div class="row"><dt>事業内容</dt><dd>経営・テクノロジーコンサルティング<span class="sub">戦略／経営／システム／業務の各領域における課題解決・変革支援</span></dd></div>
+      <div class="row"><dt>ミッション</dt><dd>Advance The Dream<span class="s">テクノロジーとビジネスを融合し、顧客とともに未来を切り拓く。</span></dd></div>
+      <div class="row"><dt>事業内容</dt><dd>経営・テクノロジーコンサルティング<span class="s">戦略／経営／システム／業務の各領域における課題解決・変革支援</span></dd></div>
       <div class="row"><dt>拠点</dt><dd>東京</dd></div>
-      <div class="row"><dt>代表者 ／ 資本金 ／ 所在地</dt><dd>―<span class="sub">（正式な情報に差し替えてください）</span></dd></div>
+      <div class="row"><dt>代表者</dt><dd>―<span class="s">公開前に正式な情報へ差し替えてください</span></dd></div>
+      <div class="row"><dt>資本金</dt><dd>―<span class="s">公開前に正式な情報へ差し替えてください</span></dd></div>
+      <div class="row"><dt>所在地</dt><dd>―<span class="s">公開前に正式な情報へ差し替えてください</span></dd></div>
     </dl>
   </div>
 </section>
 
-<section class="band" style="padding-top:96px;padding-bottom:96px;text-align:center">
-  <div class="glow"></div>
-  <div class="wrap inner">
-    <div class="eyebrow reveal" style="margin-bottom:16px">Get in touch</div>
-    <h2 class="disp reveal">Let's&nbsp;Talk</h2>
-    <p class="jp reveal" style="color:var(--slate-2);margin-bottom:34px">当社へのお問い合わせ・取材のご依頼はこちらから。</p>
-    <div class="btns reveal" style="justify-content:center"><a class="btn" href="contact.html">お問い合わせ <span class="arw">→</span></a></div>
+<section class="band center">
+  <div class="bg"></div><div class="bhz"></div>
+  <div class="wrap in">
+    <div class="rv"><span class="mono">Philosophy</span></div>
+    <h2 data-split>Advance The Dream</h2>
+    <p class="bl rv">私たちがなぜこの仕事をするのか。その根にある考えをご覧ください。</p>
+    <div class="btns rv"><a class="btn" href="philosophy.html">企業理念を見る <span class="aw">→</span></a><a class="btn gh" href="contact.html">お問い合わせ <span class="aw">→</span></a></div>
   </div>
 </section>
 
-<footer class="site-footer">
+<footer class="ft">
+  <div class="fhz"></div>
   <div class="wrap">
-    <div class="foot-top">
-      <div><div class="foot-logo"><span class="logo"><span class="mark"></span></span>NEO&nbsp;VISTA</div><p class="foot-name jp">株式会社ネオビスタ</p></div>
-      <div class="foot-cols">
-        <a href="services.html">サービス</a><a href="company.html">企業情報</a><a href="philosophy.html">企業理念</a><a href="recruit.html">採用</a><a href="contact.html">お問い合わせ</a>
-        <a href="#">プライバシーポリシー</a><a href="#">コンプライアンスポリシー</a><a href="#">情報セキュリティ基本方針</a><a href="#">サイトマップ</a>
+    <div class="ft-top">
+      <div>
+        <div class="ft-brand"><span class="mk"></span>NEO&nbsp;VISTA</div>
+        <p class="ft-nm">株式会社ネオビスタ</p>
+      </div>
+      <div class="ft-cols">
+        <div class="ft-col">
+          <h4>Business</h4>
+          <a href="services.html">サービス</a>
+          <a href="approach.html">アプローチ</a>
+          <a href="cases.html">導入事例</a>
+          <a href="insights.html">ニュース</a>
+        </div>
+        <div class="ft-col">
+          <h4>Company</h4>
+          <a href="company.html">企業情報</a>
+          <a href="philosophy.html">企業理念</a>
+          <a href="recruit.html">採用情報</a>
+          <a href="contact.html">お問い合わせ</a>
+        </div>
+        <div class="ft-col">
+          <h4>Policy</h4>
+          <a href="#">プライバシーポリシー</a>
+          <a href="#">コンプライアンスポリシー</a>
+          <a href="#">情報セキュリティ基本方針</a>
+          <a href="#">サイトマップ</a>
+        </div>
       </div>
     </div>
-    <div class="foot-bottom"><small>© Neo Vista inc.</small><a class="top" href="#top">Page Top ↑</a></div>
+    <div class="ft-bot">
+      <small>© Neo Vista inc.</small>
+      <a class="tp" href="#top">Page Top ↑</a>
+    </div>
   </div>
 </footer>
 
+<div class="mcta">
+  <a href="contact.html">Contact<i>お問い合わせ</i></a>
+  <a class="hot" href="contact.html">Casual Meeting<i>カジュアル面談 受付中</i></a>
+</div>
+
 <script src="app.js"></script>
+
 </body>
 </html>

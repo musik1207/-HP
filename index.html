@@ -8,167 +8,331 @@
 <meta property="og:site_name" content="株式会社ネオビスタ">
 <meta property="og:title" content="株式会社ネオビスタ ｜ Advance Your Dream">
 <meta property="og:type" content="website">
+<meta name="theme-color" content="#0A0608">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Archivo+Expanded:wght@600;700;800&family=Archivo:wght@400;500;600&family=Inter:wght@400;500&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Expanded:wght@700;800&family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body id="top">
 
-<header class="site-header">
-  <a class="logo" href="index.html"><span class="mark"></span>NEO&nbsp;VISTA</a>
-  <nav class="nav-desktop">
+<div class="grain"></div>
+<div class="tx enter"></div>
+<div class="progress"></div>
+
+<div class="boot">
+  <div class="bh"></div>
+  <div class="bn">000</div>
+  <div class="bl">NEO&nbsp;VISTA</div>
+</div>
+
+<header class="hd">
+  <a class="brand" href="index.html"><span class="mk"></span>NEO&nbsp;VISTA</a>
+  <nav class="nav">
     <a href="services.html">Services</a>
-    <a href="company.html">Company</a>
-    <a href="philosophy.html">Philosophy</a>
+    <a href="approach.html">Approach</a>
+    <a href="cases.html">Cases</a>
+    <a href="insights.html">Insights</a>
+    <span class="drop">
+      <a href="company.html">Company</a>
+      <div class="drop-panel"><ul>
+        <li><a href="company.html">企業情報</a></li>
+        <li><a href="philosophy.html">企業理念</a></li>
+      </ul></div>
+    </span>
     <a href="recruit.html">Recruit</a>
   </nav>
-  <a class="nav-cta" href="contact.html">Contact</a>
-  <button class="burger" aria-label="メニューを開く"><span></span><span></span><span></span></button>
+  <a class="hd-cta" href="contact.html">Contact</a>
+  <button class="burger" aria-label="メニューを開く" aria-expanded="false"><i></i><i></i><i></i></button>
 </header>
+
 <nav class="menu" id="menu">
-  <a class="m-link" href="services.html"><span class="en">Services</span><span class="jp">サービス</span></a>
-  <a class="m-link" href="company.html"><span class="en">Company</span><span class="jp">企業情報</span></a>
-  <a class="m-link" href="philosophy.html"><span class="en">Philosophy</span><span class="jp">企業理念</span></a>
-  <a class="m-link" href="recruit.html"><span class="en">Recruit</span><span class="jp">採用</span></a>
+  <div class="m-hz"></div>
+  <a class="ml" href="services.html"><span class="en">Services</span><span class="jp">サービス</span></a>
+  <a class="ml" href="approach.html"><span class="en">Approach</span><span class="jp">アプローチ</span></a>
+  <a class="ml" href="cases.html"><span class="en">Cases</span><span class="jp">導入事例</span></a>
+  <a class="ml" href="insights.html"><span class="en">Insights</span><span class="jp">ニュース</span></a>
+  <a class="ml" href="company.html"><span class="en">Company</span><span class="jp">企業情報</span></a>
+  <a class="ml" href="philosophy.html"><span class="en">Philosophy</span><span class="jp">企業理念</span></a>
+  <a class="ml" href="recruit.html"><span class="en">Recruit</span><span class="jp">採用</span></a>
   <div class="m-foot">
     <a class="m-cta" href="contact.html">お問い合わせ</a>
-    <a class="m-cta ghost" href="contact.html">カジュアル面談を申し込む</a>
+    <a class="m-cta gh" href="contact.html">カジュアル面談を申し込む</a>
   </div>
 </nav>
 
-<!-- HERO -->
+<!-- ============ HERO ============ -->
 <section class="hero">
-  <div class="vista"><div class="sky"></div><div class="floor"></div><div class="aurora"></div><div class="hline"></div><div class="stars" data-n="40"></div></div>
-  <div class="wrap inner">
-    <div class="eyebrow">Strategy — Management — System — Operation</div>
-    <h1 class="disp"><span><i>Advance</i></span><span><i>Your&nbsp;Dream</i></span></h1>
-    <p class="sub jp">経営とテクノロジーを融合し、企業のビジネスパフォーマンス最大化を一気通貫でご支援する。私たちは、その先の新しい視界（ビスタ）へと導くコンサルティングファームです。</p>
+  <div class="vista">
+    <div class="sky"></div><div class="floor"></div><div class="glow"></div>
+    <div class="hz"></div><div class="stars" data-n="44"></div>
   </div>
-  <div class="scroll-cue"><span class="bar"></span>Scroll</div>
-</section>
-
-<!-- SERVICES -->
-<section class="block" id="services">
-  <div class="wrap">
-    <div class="sec-head reveal">
-      <div class="l"><div class="eyebrow k">Services</div><h2 class="disp">What&nbsp;We&nbsp;Do</h2></div>
-      <p class="r jp">戦略立案から実装・運用までを横断する4領域のコンサルティング。構想を成果へと接続します。</p>
+  <div class="wrap in">
+    <div class="kicker">
+      <span class="dot"></span>
+      <span class="mono">Strategy — Management — System — Operation</span>
     </div>
-    <div class="svc-grid reveal">
-      <a class="svc-card" href="services.html#strategy">
-        <div class="idx">01</div><div class="en disp">Strategy</div><div class="jp">戦略</div>
-        <p class="jp">全社戦略・新規事業・M&A・サステナビリティ。企業の進むべき方向を描きます。</p>
-        <span class="go">詳しく見る <span class="arw">→</span></span>
-      </a>
-      <a class="svc-card" href="services.html#management">
-        <div class="idx">02</div><div class="en disp">Management</div><div class="jp">経営</div>
-        <p class="jp">経営計画・KPI/KGI策定・ガバナンス・PMI。実行を支える経営基盤を構築します。</p>
-        <span class="go">詳しく見る <span class="arw">→</span></span>
-      </a>
-      <a class="svc-card" href="services.html#system">
-        <div class="idx">03</div><div class="en disp">System</div><div class="jp">システム</div>
-        <p class="jp">IT戦略・データ基盤・AI開発・PMO・セキュリティ。テクノロジーで変革を形にします。</p>
-        <span class="go">詳しく見る <span class="arw">→</span></span>
-      </a>
-      <a class="svc-card" href="services.html#operation">
-        <div class="idx">04</div><div class="en disp">Operation</div><div class="jp">業務</div>
-        <p class="jp">業務立上げ・効率化を横断支援。マーケ・調達・物流から管理部門まで。</p>
-        <span class="go">詳しく見る <span class="arw">→</span></span>
-      </a>
+    <h1>
+      <span class="ln"><span style="--i:0">Advance</span></span>
+      <span class="ln"><span class="red" style="--i:1">Your&nbsp;Dream</span></span>
+    </h1>
+    <p class="sub lead">経営とテクノロジーを融合し、企業のビジネスパフォーマンス最大化を一気通貫でご支援する。私たちは、その先の新しい視界（ビスタ）へと導くコンサルティングファームです。</p>
+  </div>
+  <div class="cues">
+    <span class="cue"><span class="rail"></span>Scroll</span>
+    <div class="stack">
+      <div>Mission — <b>Advance The Dream</b></div>
+      <div>Founded — <b>2024.11</b></div>
     </div>
   </div>
 </section>
 
-<!-- RECRUIT BAND -->
-<section class="band">
-  <div class="glow"></div><div class="rline"></div>
-  <div class="wrap inner">
-    <div class="eyebrow reveal">Recruit</div>
-    <h2 class="disp reveal">Beyond<br>the&nbsp;Horizon</h2>
-    <p class="lead jp reveal">あなたのスキルと情熱が、<br>新たな価値を生み出す原動力に。</p>
-    <div class="btns reveal">
-      <a class="btn" href="recruit.html">採用情報を見る <span class="arw">→</span></a>
-      <a class="btn ghost" href="contact.html">カジュアル面談 <span class="arw">→</span></a>
-    </div>
+<!-- ============ MARQUEE ============ -->
+<div class="mq" aria-hidden="true">
+  <div class="mq-in">
+    <span class="hot">Advance Your Dream</span><i></i><span>Strategy</span><i></i><span>Management</span><i></i><span>System</span><i></i><span>Operation</span><i></i>
+    <span class="hot">Advance Your Dream</span><i></i><span>Strategy</span><i></i><span>Management</span><i></i><span>System</span><i></i><span>Operation</span><i></i>
   </div>
-</section>
+</div>
 
-<!-- COMPANY + NEWS -->
-<section class="block">
-  <div class="wrap">
-    <div class="rule reveal" style="margin-bottom:70px"></div>
-    <div class="cards c2" style="align-items:start">
-      <div class="card reveal" style="padding:44px 36px">
-        <div class="eyebrow" style="margin-bottom:16px">Company</div>
-        <h2 class="disp" style="font-size:40px;margin-bottom:14px">About&nbsp;Us</h2>
-        <p class="jp" style="color:var(--slate-2);font-size:14px;line-height:1.95;margin-bottom:26px;max-width:380px">経営とテクノロジーの両輪で、企業の変革をハンズオンで伴走支援。2024年11月設立の新興ファームとして、産業の新しいスタンダードを築きます。</p>
-        <div style="display:flex;gap:40px;margin-bottom:30px">
-          <div><div class="disp" style="font-size:30px;color:#fff">4</div><div class="eyebrow" style="letter-spacing:.16em;margin-top:4px">Domains</div></div>
-          <div><div class="disp" style="font-size:30px;color:#fff">360°</div><div class="eyebrow" style="letter-spacing:.16em;margin-top:4px">End to End</div></div>
+<!-- ============ DEPTH AXIS / SERVICES ============ -->
+<section class="axis-sec" id="services">
+  <div class="axis-pin">
+    <div class="axis-head">
+      <div class="sh" style="margin-bottom:0">
+        <div class="l">
+          <div class="k"><span class="mono">Services</span></div>
+          <h2 class="h2" data-split>Four Domains</h2>
         </div>
-        <a class="btn ghost" href="company.html">企業情報を見る <span class="arw">→</span></a>
+        <p class="r lead">構想から実装まで。上流の戦略立案から現場のオペレーションまでを、同じチームが地続きで担います。</p>
       </div>
+      <div class="axis-meter">
+        <span>構想 / Concept</span>
+        <span class="rail"><i></i></span>
+        <span>実装 / Execution</span>
+      </div>
+    </div>
 
-      <div>
-        <div class="eyebrow reveal" style="margin-bottom:14px">News</div>
-        <h2 class="disp reveal" style="font-size:40px;margin-bottom:24px">Latest</h2>
-        <a class="news-item reveal" href="#">
-          <div class="date">2026.03.25</div>
-          <h3 class="jp">「ハイディールパートナーズ」にて当社が紹介されました<span class="arw">→</span></h3>
-          <p class="jp">ハイクラス層の転職支援で実績を誇る転職エージェントにて、当社が紹介されました。</p>
-        </a>
-        <a class="news-item reveal" href="#">
-          <div class="date">2026.01.15</div>
-          <h3 class="jp">生成AI活用支援サービスの提供を開始しました<span class="arw">→</span></h3>
-        </a>
-        <a class="news-item reveal" href="#">
-          <div class="date">2025.11.04</div>
-          <h3 class="jp">キャリア採用のカジュアル面談受付を開始しました<span class="arw">→</span></h3>
-        </a>
-      </div>
+    <div class="axis-track">
+      <a class="axis-card" href="services.html#strategy" data-cursor="VIEW">
+        <span class="no">D—01</span>
+        <span class="en">Strategy</span>
+        <span class="jn">戦略</span>
+        <p>全社戦略・ポートフォリオの再設計から、新規事業の立ち上げまで。企業が進むべき方向を、データと現場感の両方から描きます。</p>
+        <div class="tags"><b>全社戦略</b><b>新規事業立案</b><b>M&amp;A</b><b>GX / ESG</b></div>
+      </a>
+      <a class="axis-card" href="services.html#management" data-cursor="VIEW">
+        <span class="no">D—02</span>
+        <span class="en">Management</span>
+        <span class="jn">経営</span>
+        <p>描いた戦略を、動く仕組みへ。経営計画とKPIを設計し、意思決定が回りつづける経営基盤を構築します。</p>
+        <div class="tags"><b>経営計画</b><b>KPI / KGI</b><b>ガバナンス</b><b>PMI</b></div>
+      </a>
+      <a class="axis-card" href="services.html#system" data-cursor="VIEW">
+        <span class="no">D—03</span>
+        <span class="en">System</span>
+        <span class="jn">システム</span>
+        <p>テクノロジーで変革を形にする。データ基盤と生成AIを、導入ではなく成果に接続するところまで伴走します。</p>
+        <div class="tags"><b>IT戦略</b><b>データ基盤</b><b>AI開発</b><b>PMO</b><b>セキュリティ</b></div>
+      </a>
+      <a class="axis-card" href="services.html#operation" data-cursor="VIEW">
+        <span class="no">D—04</span>
+        <span class="en">Operation</span>
+        <span class="jn">業務</span>
+        <p>現場が回って、はじめて変革は完成する。業務の立ち上げと効率化を、各部門を横断してハンズオンで支援します。</p>
+        <div class="tags"><b>業務効率化</b><b>調達 / 物流</b><b>営業 / 販売</b><b>人事 / 経理</b></div>
+      </a>
+      <a class="axis-card end" href="services.html" data-cursor="ALL">
+        <span class="mono" style="color:var(--ash)">Index</span>
+        <span class="en" style="margin-top:14px">All<br>Services</span>
+        <span class="tlink" style="margin-top:24px">一覧を見る <span class="aw">→</span></span>
+      </a>
     </div>
   </div>
 </section>
 
-<!-- CONTACT CTA -->
-<section class="band" style="padding-top:96px;padding-bottom:96px;text-align:center">
-  <div class="glow" style="background:radial-gradient(60% 70% at 50% 120%, rgba(255,46,67,.24), transparent 66%),linear-gradient(180deg,#140A0D,#1E0E12)"></div>
-  <div class="wrap inner">
-    <div class="eyebrow reveal" style="margin-bottom:16px">Get in touch</div>
-    <h2 class="disp reveal">Let's&nbsp;Talk</h2>
-    <p class="jp reveal" style="color:var(--slate-2);margin-bottom:34px">事業課題のご相談から、キャリア採用のカジュアル面談まで。お気軽にお問い合わせください。</p>
-    <div class="btns reveal" style="justify-content:center">
-      <a class="btn" href="contact.html">お問い合わせ <span class="arw">→</span></a>
-    </div>
-  </div>
-</section>
-
-<footer class="site-footer">
+<!-- ============ APPROACH ============ -->
+<section class="sec">
   <div class="wrap">
-    <div class="foot-top">
-      <div>
-        <div class="foot-logo"><span class="logo"><span class="mark"></span></span>NEO&nbsp;VISTA</div>
-        <p class="foot-name jp">株式会社ネオビスタ</p>
+    <div class="hz-rule" style="margin-bottom:clamp(50px,6vw,90px)"></div>
+    <div class="sh">
+      <div class="l">
+        <div class="k"><span class="mono">Approach</span></div>
+        <h2 class="h2" data-split>How We Work</h2>
       </div>
-      <div class="foot-cols">
-        <a href="services.html">サービス</a>
-        <a href="company.html">企業情報</a>
-        <a href="philosophy.html">企業理念</a>
-        <a href="recruit.html">採用</a>
-        <a href="contact.html">お問い合わせ</a>
-        <a href="#">プライバシーポリシー</a>
-        <a href="#">コンプライアンスポリシー</a>
-        <a href="#">情報セキュリティ基本方針</a>
-        <a href="#">サイトマップ</a>
+      <p class="r lead">人海戦術に頼らない。テクノロジーを賢く使い、実行までやり切る。それが私たちの流儀です。</p>
+    </div>
+    <div class="grid c3">
+      <div class="card rv" data-d="1">
+        <div class="no">P—01</div>
+        <h3 class="h3">技術を、手足のように</h3>
+        <p>単なるツールの導入では終わらせません。生成AIやDXテクノロジーを自らの手足のように駆使し、本質的な課題解決に向き合います。</p>
+      </div>
+      <div class="card rv" data-d="2">
+        <div class="no">P—02</div>
+        <h3 class="h3">実行にこだわる</h3>
+        <p>構想を描いて終わりにしない。成果の実現までハンズオンで伴走し、現場が回るところまでを責任範囲とします。</p>
+      </div>
+      <div class="card rv" data-d="3">
+        <div class="no">P—03</div>
+        <h3 class="h3">人を育て、輩出する</h3>
+        <p>次の時代を担う人々を育成・輩出するプラットフォームであること。個の成長が、産業全体への貢献につながると信じています。</p>
       </div>
     </div>
-    <div class="foot-bottom">
+    <div class="rv" style="margin-top:36px"><a class="tlink" href="approach.html">アプローチの全体像を見る <span class="aw">→</span></a></div>
+  </div>
+</section>
+
+<!-- ============ CASES ============ -->
+<section class="sec sec-tight">
+  <div class="wrap">
+    <div class="hz-rule" style="margin-bottom:clamp(50px,6vw,90px)"></div>
+    <div class="sh">
+      <div class="l">
+        <div class="k"><span class="mono">Cases</span></div>
+        <h2 class="h2" data-split>Selected Work</h2>
+      </div>
+      <p class="r lead">戦略から実装まで、成果に接続した支援の一部をご紹介します。</p>
+    </div>
+
+    <div class="case-grid">
+      <a class="case rv" href="cases.html#c-outdoor" data-cursor="VIEW">
+        <div class="meta"><span>Strategy</span><span class="c">大手アウトドアメーカー</span></div>
+        <h3>顧客データに基づくマーケティング高度化</h3>
+        <p>100万人単位の会員データを、BI/ETLツールで購買行動・属性・利用金額の軸から分析。LTV最大化を目的とした戦略を立案し、具体的なプロモーション施策の策定まで支援しました。</p>
+      </a>
+      <a class="case rv" data-d="1" href="cases.html#c-tire" data-cursor="VIEW">
+        <div class="meta"><span>Operation</span><span class="c">大手タイヤ製造事業者</span></div>
+        <h3>AIを活用した物流業務最適化</h3>
+        <p>生成AIとPythonを活用し、複雑な物流網の効率化を支援する「物流最適化シミュレーション」を実施。輸配送ルートや納品スケジュール等の変数をモデル化し、データに基づく戦略策定を支援しました。</p>
+      </a>
+    </div>
+    <div class="rv" style="margin-top:32px"><a class="tlink" href="cases.html">導入事例をすべて見る <span class="aw">→</span></a></div>
+  </div>
+</section>
+
+<!-- ============ COMPANY / STATS ============ -->
+<section class="sec sec-tight">
+  <div class="wrap">
+    <div class="hz-rule" style="margin-bottom:clamp(50px,6vw,90px)"></div>
+    <div class="sh">
+      <div class="l">
+        <div class="k"><span class="mono">Company</span></div>
+        <h2 class="h2" data-split>About Us</h2>
+      </div>
+      <p class="r lead">2024年11月設立。経営とテクノロジーの両輪で、産業の新しいスタンダードを築きます。</p>
+    </div>
+    <div class="stats rv" style="margin-bottom:48px">
+      <div class="stat"><div class="n"><span data-count="4">0</span></div><div class="l">Service Domains</div></div>
+      <div class="stat"><div class="n">360<em>°</em></div><div class="l">End to End</div></div>
+      <div class="stat"><div class="n">2024<em>.11</em></div><div class="l">Founded</div></div>
+    </div>
+    <div class="rv btns">
+      <a class="btn gh" href="company.html">企業情報 <span class="aw">→</span></a>
+      <a class="btn gh" href="philosophy.html">企業理念 <span class="aw">→</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ INSIGHTS ============ -->
+<section class="sec sec-tight">
+  <div class="wrap">
+    <div class="hz-rule" style="margin-bottom:clamp(50px,6vw,90px)"></div>
+    <div class="sh">
+      <div class="l">
+        <div class="k"><span class="mono">Insights</span></div>
+        <h2 class="h2" data-split>Latest</h2>
+      </div>
+      <p class="r lead">当社からのお知らせと、現場から生まれた知見をお届けします。</p>
+    </div>
+    <a class="post rv" href="insights.html">
+      <div class="row"><span class="d">2026.03.25</span><span class="cat">News</span></div>
+      <h3>「ハイディールパートナーズ」にて当社が紹介されました<span class="aw">→</span></h3>
+      <p>コンサルティング業界をはじめとするハイクラス層の転職支援において数多くの実績を誇る転職エージェントにて、当社が紹介されました。</p>
+    </a>
+    <a class="post rv" href="insights.html">
+      <div class="row"><span class="d">2026.01.15</span><span class="cat">Service</span></div>
+      <h3>生成AI活用支援サービスの提供を開始しました<span class="aw">→</span></h3>
+    </a>
+    <a class="post rv" href="insights.html">
+      <div class="row"><span class="d">2025.11.04</span><span class="cat">Recruit</span></div>
+      <h3>キャリア採用のカジュアル面談受付を開始しました<span class="aw">→</span></h3>
+    </a>
+    <div class="rv" style="margin-top:32px"><a class="tlink" href="insights.html">すべて見る <span class="aw">→</span></a></div>
+  </div>
+</section>
+
+<!-- ============ RECRUIT BAND ============ -->
+<section class="band">
+  <div class="bg"></div><div class="bhz"></div>
+  <div class="wrap in">
+    <div class="k rv" style="display:flex;align-items:center;gap:10px;margin-bottom:6px">
+      <span class="mono">Recruit</span>
+    </div>
+    <h2 data-split>Beyond the Horizon</h2>
+    <p class="bl rv">あなたのスキルと情熱が、<br>新たな価値を生み出す原動力に。</p>
+    <div class="btns rv">
+      <a class="btn" href="recruit.html">採用情報を見る <span class="aw">→</span></a>
+      <a class="btn gh" href="contact.html">カジュアル面談 <span class="aw">→</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section class="band center">
+  <div class="bg" style="background:radial-gradient(60% 70% at 50% 122%, rgba(255,59,78,.26), transparent 66%),linear-gradient(180deg,#130A0D,#1C0E12)"></div>
+  <div class="wrap in">
+    <div class="rv"><span class="mono">Get in touch</span></div>
+    <h2 data-split>Let's Talk</h2>
+    <p class="bl rv">事業課題のご相談から、キャリア採用のカジュアル面談まで。<br>まずはお気軽にお問い合わせください。</p>
+    <div class="btns rv"><a class="btn" href="contact.html">お問い合わせ <span class="aw">→</span></a></div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="ft">
+  <div class="fhz"></div>
+  <div class="wrap">
+    <div class="ft-top">
+      <div>
+        <div class="ft-brand"><span class="mk"></span>NEO&nbsp;VISTA</div>
+        <p class="ft-nm">株式会社ネオビスタ</p>
+      </div>
+      <div class="ft-cols">
+        <div class="ft-col">
+          <h4>Business</h4>
+          <a href="services.html">サービス</a>
+          <a href="approach.html">アプローチ</a>
+          <a href="cases.html">導入事例</a>
+          <a href="insights.html">ニュース</a>
+        </div>
+        <div class="ft-col">
+          <h4>Company</h4>
+          <a href="company.html">企業情報</a>
+          <a href="philosophy.html">企業理念</a>
+          <a href="recruit.html">採用情報</a>
+          <a href="contact.html">お問い合わせ</a>
+        </div>
+        <div class="ft-col">
+          <h4>Policy</h4>
+          <a href="#">プライバシーポリシー</a>
+          <a href="#">コンプライアンスポリシー</a>
+          <a href="#">情報セキュリティ基本方針</a>
+          <a href="#">サイトマップ</a>
+        </div>
+      </div>
+    </div>
+    <div class="ft-bot">
       <small>© Neo Vista inc.</small>
-      <a class="top" href="#top">Page Top ↑</a>
+      <a class="tp" href="#top">Page Top ↑</a>
     </div>
   </div>
 </footer>
+
+<div class="mcta">
+  <a href="contact.html">Contact<i>お問い合わせ</i></a>
+  <a class="hot" href="contact.html">Casual Meeting<i>カジュアル面談 受付中</i></a>
+</div>
 
 <script src="app.js"></script>
 </body>
