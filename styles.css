@@ -1,0 +1,300 @@
+/* =========================================================
+   NEO VISTA — shared design system  (red corporate, responsive)
+   ========================================================= */
+:root{
+  --ink:#0C0708;      /* near-black, faint red-warm undertone */
+  --ink-2:#150A0C;    /* panel */
+  --ink-3:#1F0E12;    /* raised panel */
+  --line:rgba(255,236,238,.10);
+  --line-2:rgba(255,236,238,.18);
+  --mist:#F4EDEE;     /* primary text */
+  --slate:#A08E92;    /* secondary text */
+  --slate-2:#C7B9BC;  /* brighter secondary */
+  --red:#E4002B;      /* brand red */
+  --red-hot:#FF2E43;  /* glow / highlight */
+  --red-deep:#9E0020; /* deep crimson */
+  --maxw:1240px;
+  --safe-b:env(safe-area-inset-bottom,0px);
+}
+*{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html{scroll-behavior:smooth}
+body{
+  background:var(--ink);color:var(--mist);
+  font-family:"Inter","Zen Kaku Gothic New",sans-serif;line-height:1.75;
+  -webkit-font-smoothing:antialiased;overflow-x:hidden;
+}
+a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%}
+::selection{background:rgba(228,0,43,.30);color:#fff}
+.jp{font-family:"Zen Kaku Gothic New",sans-serif}
+.disp{font-family:"Archivo Expanded","Archivo",sans-serif;letter-spacing:-.01em;line-height:1}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 clamp(20px,5vw,40px)}
+.eyebrow{font-family:"Archivo",sans-serif;font-size:11px;font-weight:600;letter-spacing:.3em;
+  text-transform:uppercase;color:var(--red)}
+@media(min-width:700px){.eyebrow{font-size:12px;letter-spacing:.34em}}
+
+/* ---------- HEADER / NAV ---------- */
+.site-header{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;
+  justify-content:space-between;padding:16px clamp(20px,5vw,40px);
+  transition:background .4s,border-color .4s,padding .4s;border-bottom:1px solid transparent}
+.site-header.scrolled{background:rgba(12,7,8,.78);backdrop-filter:blur(14px);
+  border-bottom:1px solid var(--line);padding-top:12px;padding-bottom:12px}
+.logo{display:flex;align-items:center;gap:10px;font-family:"Archivo Expanded",sans-serif;
+  font-weight:700;font-size:15px;letter-spacing:.02em;z-index:2}
+.logo .mark{width:20px;height:20px;position:relative;flex:0 0 auto}
+.logo .mark::before{content:"";position:absolute;inset:0;border:1.5px solid var(--mist);border-radius:50%}
+.logo .mark::after{content:"";position:absolute;left:2px;right:2px;top:50%;height:1.5px;
+  background:var(--red);box-shadow:0 0 10px var(--red)}
+.nav-desktop{display:none;align-items:center;gap:34px}
+.nav-desktop a{font-size:13.5px;font-weight:500;color:var(--slate-2);transition:color .25s;position:relative}
+.nav-desktop a::after{content:"";position:absolute;left:0;right:100%;bottom:-6px;height:1px;
+  background:var(--red);transition:right .3s}
+.nav-desktop a:hover{color:var(--mist)}
+.nav-desktop a:hover::after,.nav-desktop a.current::after{right:0}
+.nav-desktop a.current{color:var(--mist)}
+.nav-cta{display:none;font-family:"Archivo",sans-serif;font-size:12px;font-weight:600;letter-spacing:.08em;
+  text-transform:uppercase;color:#fff;background:var(--red);padding:11px 20px;border-radius:2px;
+  transition:transform .25s,box-shadow .25s}
+@media(min-width:900px){.nav-cta{display:inline-flex}}
+.nav-cta:hover{transform:translateY(-2px);box-shadow:0 10px 30px rgba(228,0,43,.4)}
+.burger{width:40px;height:40px;border:1px solid var(--line-2);border-radius:3px;
+  background:rgba(255,255,255,.02);position:relative;cursor:pointer;z-index:2}
+.burger span{position:absolute;left:11px;right:11px;height:1.5px;background:var(--mist);transition:.32s}
+.burger span:nth-child(1){top:15px}.burger span:nth-child(2){top:20px}.burger span:nth-child(3){top:25px}
+body.menu-open .burger span:nth-child(1){top:20px;transform:rotate(45deg)}
+body.menu-open .burger span:nth-child(2){opacity:0}
+body.menu-open .burger span:nth-child(3){top:20px;transform:rotate(-45deg)}
+@media(min-width:900px){.nav-desktop{display:flex}.burger{display:none}}
+
+/* ---------- FULLSCREEN MOBILE MENU ---------- */
+.menu{position:fixed;inset:0;z-index:90;background:linear-gradient(180deg,#0A0507,#170B0E);
+  padding:96px clamp(20px,5vw,40px) 40px;
+  transform:translateY(-100%);transition:transform .5s cubic-bezier(.7,0,.2,1);
+  display:flex;flex-direction:column}
+.menu.open{transform:translateY(0)}
+.menu a.m-link{display:flex;align-items:baseline;justify-content:space-between;padding:20px 2px;
+  border-bottom:1px solid var(--line)}
+.menu a.m-link .en{font-family:"Archivo Expanded",sans-serif;font-weight:700;font-size:26px}
+.menu a.m-link .jp{font-size:12px;color:var(--slate)}
+.menu a.m-link.current .en{color:var(--red)}
+.menu .m-foot{margin-top:auto;display:flex;flex-direction:column;gap:12px;padding-top:24px}
+.menu .m-cta{text-align:center;background:var(--red);color:#fff;font-family:"Archivo",sans-serif;
+  font-weight:600;letter-spacing:.1em;text-transform:uppercase;font-size:12px;padding:15px;border-radius:2px}
+.menu .m-cta.ghost{background:transparent;color:var(--mist);border:1px solid var(--line-2)}
+@media(min-width:900px){.menu{display:none}}
+
+/* ---------- VISTA / HORIZON (shared hero atmosphere) ---------- */
+.vista{position:absolute;inset:0;z-index:0;overflow:hidden}
+.vista .sky{position:absolute;inset:0;
+  background:
+    radial-gradient(120% 80% at 50% var(--hy,72%), rgba(255,46,67,.20) 0%, rgba(228,0,43,.09) 22%, rgba(12,7,8,0) 52%),
+    linear-gradient(180deg,#060304 0%,#0C0708 34%,#140A0D 62%,#1E0E12 100%)}
+.vista .aurora{position:absolute;left:50%;top:var(--hy,72%);transform:translate(-50%,-50%);
+  width:160%;height:200px;background:radial-gradient(60% 100% at 50% 50%, rgba(255,46,67,.30),
+  rgba(228,0,43,.10) 42%, transparent 72%);filter:blur(26px);animation:breathe 9s ease-in-out infinite}
+@keyframes breathe{0%,100%{opacity:.7}50%{opacity:1}}
+.vista .hline{position:absolute;left:0;right:0;top:var(--hy,72%);height:1px;
+  background:linear-gradient(90deg,transparent,rgba(255,46,67,.85) 44%,#fff 50%,rgba(255,46,67,.85) 56%,transparent);
+  box-shadow:0 0 22px 2px rgba(228,0,43,.5)}
+.vista .floor{position:absolute;left:50%;top:var(--hy,72%);transform:translateX(-50%) perspective(320px) rotateX(75deg);
+  transform-origin:top center;width:300%;height:70vh;
+  background-image:
+    repeating-linear-gradient(90deg, rgba(255,236,238,.08) 0 1px, transparent 1px 72px),
+    repeating-linear-gradient(0deg, rgba(255,236,238,.07) 0 1px, transparent 1px 72px);
+  -webkit-mask-image:linear-gradient(180deg,#000,rgba(0,0,0,.4) 46%,transparent 80%);
+  mask-image:linear-gradient(180deg,#000,rgba(0,0,0,.4) 46%,transparent 80%);
+  animation:drift 22s linear infinite}
+@keyframes drift{from{background-position:0 0}to{background-position:0 72px}}
+.vista .star{position:absolute;width:2px;height:2px;border-radius:50%;background:#fff}
+
+/* ---------- HOME HERO ---------- */
+.hero{position:relative;min-height:640px;height:100svh;display:flex;flex-direction:column;
+  justify-content:center;overflow:hidden}
+.hero .inner{position:relative;z-index:5;width:100%}
+.hero .eyebrow{margin-bottom:22px;opacity:0;animation:rise .9s .15s forwards}
+.hero h1{font-family:"Archivo Expanded",sans-serif;font-weight:800;
+  font-size:clamp(46px,9vw,120px);line-height:.94;letter-spacing:-.02em;color:#fff}
+.hero h1 span{display:block;overflow:hidden}
+.hero h1 span i{display:block;font-style:normal;transform:translateY(105%);
+  animation:reveal 1s forwards cubic-bezier(.16,.84,.28,1)}
+.hero h1 span:nth-child(1) i{animation-delay:.18s}
+.hero h1 span:nth-child(2) i{animation-delay:.3s;color:var(--red);text-shadow:0 0 60px rgba(228,0,43,.4)}
+@keyframes reveal{to{transform:translateY(0)}}
+.hero .sub{margin-top:26px;max-width:520px;font-size:15px;line-height:1.9;color:var(--slate-2);
+  opacity:0;animation:rise 1s .7s forwards}
+@keyframes rise{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:none}}
+.scroll-cue{position:absolute;left:clamp(20px,5vw,40px);bottom:30px;z-index:6;display:flex;
+  align-items:center;gap:11px;font-family:"Archivo",sans-serif;font-size:10.5px;letter-spacing:.26em;
+  text-transform:uppercase;color:var(--slate);opacity:0;animation:rise 1s 1.1s forwards}
+.scroll-cue .bar{width:46px;height:1px;background:var(--slate);position:relative;overflow:hidden}
+.scroll-cue .bar::after{content:"";position:absolute;inset:0;background:var(--red);animation:scan 2.4s ease-in-out infinite}
+@keyframes scan{0%{transform:translateX(-100%)}60%,100%{transform:translateX(100%)}}
+
+/* ---------- INTERIOR PAGE HERO ---------- */
+.page-hero{position:relative;overflow:hidden;padding:150px 0 70px;--hy:100%}
+.page-hero .inner{position:relative;z-index:5}
+.page-hero .crumb{font-family:"Archivo",sans-serif;font-size:11px;letter-spacing:.16em;
+  text-transform:uppercase;color:var(--slate);margin-bottom:20px}
+.page-hero .crumb a:hover{color:var(--red)}
+.page-hero h1{font-family:"Archivo Expanded",sans-serif;font-weight:800;
+  font-size:clamp(40px,7vw,84px);line-height:.98;letter-spacing:-.02em;color:#fff}
+.page-hero .jp-title{margin-top:14px;font-size:15px;letter-spacing:.1em;color:var(--red)}
+.page-hero .lead{margin-top:26px;max-width:640px;font-size:15px;line-height:1.95;color:var(--slate-2)}
+@media(min-width:700px){.page-hero{padding:180px 0 80px}}
+
+/* ---------- SECTION SHELL ---------- */
+section.block{position:relative;padding:80px 0}
+@media(min-width:700px){section.block{padding:130px 0}}
+.sec-head{margin-bottom:44px}
+@media(min-width:800px){.sec-head{display:flex;align-items:flex-end;justify-content:space-between;
+  gap:40px;margin-bottom:60px}}
+.sec-head .k{margin-bottom:16px}
+.sec-head h2{font-family:"Archivo Expanded",sans-serif;font-weight:700;
+  font-size:clamp(32px,5vw,60px);line-height:1;letter-spacing:-.02em}
+.sec-head .r{max-width:400px;font-size:14px;color:var(--slate-2);line-height:1.9;margin-top:18px}
+@media(min-width:800px){.sec-head .r{margin-top:0;padding-bottom:8px}}
+.rule{height:1px;background:var(--line);position:relative;overflow:hidden}
+.rule::after{content:"";position:absolute;left:0;top:0;height:100%;width:120px;
+  background:linear-gradient(90deg,transparent,var(--red),transparent);opacity:.7}
+
+/* ---------- BUTTONS ---------- */
+.btn{display:inline-flex;align-items:center;gap:12px;font-family:"Archivo",sans-serif;font-weight:600;
+  font-size:12.5px;letter-spacing:.12em;text-transform:uppercase;color:#fff;background:var(--red);
+  padding:15px 28px;border-radius:2px;transition:transform .3s,box-shadow .3s,background .3s;cursor:pointer}
+.btn:hover{transform:translateY(-3px);box-shadow:0 16px 40px rgba(228,0,43,.35);background:var(--red-hot)}
+.btn .arw{transition:transform .3s}
+.btn:hover .arw{transform:translateX(5px)}
+.btn.ghost{background:transparent;color:var(--mist);border:1px solid var(--line-2)}
+.btn.ghost:hover{border-color:var(--red);color:var(--red);background:transparent;box-shadow:none}
+
+/* ---------- SERVICE CARDS (home) ---------- */
+.svc-grid{display:grid;grid-template-columns:1fr;gap:1px;background:var(--line);
+  border:1px solid var(--line);border-radius:4px;overflow:hidden}
+@media(min-width:640px){.svc-grid{grid-template-columns:1fr 1fr}}
+.svc-card{background:var(--ink-2);padding:34px 30px;position:relative;transition:background .35s;display:block}
+.svc-card:hover{background:var(--ink-3)}
+.svc-card .idx{font-family:"Archivo",sans-serif;font-size:12px;font-weight:600;color:var(--slate);letter-spacing:.1em}
+.svc-card .en{font-family:"Archivo Expanded",sans-serif;font-weight:700;font-size:26px;
+  margin:10px 0 2px;transition:color .3s}
+.svc-card:hover .en{color:var(--red)}
+.svc-card .jp{font-size:12.5px;color:var(--slate);letter-spacing:.06em}
+.svc-card p{font-size:13px;color:var(--slate-2);line-height:1.85;margin-top:16px}
+.svc-card .go{margin-top:20px;font-family:"Archivo",sans-serif;font-size:11px;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--red);display:inline-flex;gap:8px;align-items:center}
+.svc-card .go .arw{transition:transform .3s}
+.svc-card:hover .go .arw{transform:translateX(5px)}
+
+/* ---------- SERVICE SECTIONS (services page) ---------- */
+.svc-full{border-top:1px solid var(--line);padding:56px 0}
+.svc-full:first-of-type{border-top:0}
+.svc-full .head{display:flex;align-items:baseline;gap:18px;margin-bottom:8px}
+.svc-full .head .idx{font-family:"Archivo",sans-serif;font-size:13px;font-weight:600;color:var(--red);letter-spacing:.1em}
+.svc-full .head .en{font-family:"Archivo Expanded",sans-serif;font-weight:700;font-size:clamp(30px,4.5vw,48px);letter-spacing:-.01em}
+.svc-full .head .jp{font-size:14px;color:var(--slate);margin-left:2px}
+.svc-full .grid{display:grid;grid-template-columns:1fr;gap:30px;margin-top:28px}
+@media(min-width:820px){.svc-full .grid{grid-template-columns:0.9fr 1.1fr;gap:48px}}
+.caps{display:flex;flex-wrap:wrap;gap:9px;align-content:flex-start}
+.caps span{font-size:13px;color:var(--slate-2);border:1px solid var(--line-2);border-radius:100px;
+  padding:7px 15px;background:rgba(255,255,255,.02);transition:border-color .3s,color .3s}
+.caps span:hover{border-color:var(--red);color:var(--mist)}
+.case{border-left:2px solid var(--red);padding-left:22px}
+.case .tag{font-family:"Archivo",sans-serif;font-size:11px;letter-spacing:.2em;text-transform:uppercase;
+  color:var(--red);margin-bottom:12px}
+.case .client{font-size:13px;color:var(--slate);margin-bottom:6px}
+.case h3{font-family:"Zen Kaku Gothic New",sans-serif;font-weight:700;font-size:21px;line-height:1.45;
+  margin-bottom:14px;color:#fff}
+.case p{font-size:14px;color:var(--slate-2);line-height:1.95}
+
+/* ---------- FEATURE / VALUE CARDS ---------- */
+.cards{display:grid;grid-template-columns:1fr;gap:16px}
+@media(min-width:700px){.cards.c3{grid-template-columns:repeat(3,1fr)}.cards.c2{grid-template-columns:1fr 1fr}}
+.card{border:1px solid var(--line);border-radius:4px;padding:32px 28px;background:var(--ink-2);
+  position:relative;overflow:hidden;transition:border-color .35s,transform .35s}
+.card:hover{border-color:var(--line-2);transform:translateY(-4px)}
+.card .num{font-family:"Archivo Expanded",sans-serif;font-weight:700;font-size:22px;color:var(--red);margin-bottom:14px}
+.card h3{font-family:"Zen Kaku Gothic New",sans-serif;font-weight:700;font-size:19px;margin-bottom:12px;line-height:1.5}
+.card p{font-size:13.5px;color:var(--slate-2);line-height:1.9}
+
+/* ---------- PROFILE TABLE ---------- */
+.profile{border-top:1px solid var(--line)}
+.profile .row{display:grid;grid-template-columns:1fr;gap:2px;padding:20px 2px;border-bottom:1px solid var(--line)}
+@media(min-width:640px){.profile .row{grid-template-columns:200px 1fr;gap:24px;padding:22px 2px}}
+.profile .row dt{font-family:"Archivo",sans-serif;font-size:12px;letter-spacing:.12em;text-transform:uppercase;
+  color:var(--red);padding-top:2px}
+.profile .row dd{font-size:14.5px;color:var(--mist);line-height:1.8}
+.profile .row dd .sub{color:var(--slate);font-size:13px}
+
+/* ---------- LADDER (recruit) ---------- */
+.ladder{border-top:1px solid var(--line)}
+.ladder .step{display:flex;align-items:center;gap:18px;padding:18px 2px;border-bottom:1px solid var(--line);
+  transition:padding-left .3s}
+.ladder .step:hover{padding-left:12px}
+.ladder .step .bar{flex:0 0 auto;width:6px;border-radius:3px;background:linear-gradient(180deg,var(--red),var(--red-deep))}
+.ladder .step .tt{flex:1}
+.ladder .step .role{font-family:"Zen Kaku Gothic New",sans-serif;font-weight:700;font-size:17px}
+.ladder .step .en{font-family:"Archivo",sans-serif;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--slate);margin-top:2px}
+.ladder .step .pay{font-family:"Archivo Expanded",sans-serif;font-weight:700;font-size:15px;color:var(--mist);white-space:nowrap}
+.ladder .step .pay .u{font-size:11px;color:var(--slate);font-family:"Inter",sans-serif;font-weight:400}
+
+/* ---------- NEWS ---------- */
+.news-item{display:block;border-top:1px solid var(--line);padding:24px 0;transition:padding-left .3s}
+.news-item:last-child{border-bottom:1px solid var(--line)}
+.news-item .date{font-family:"Archivo",sans-serif;font-size:12px;letter-spacing:.12em;color:var(--red);margin-bottom:9px}
+.news-item h3{font-size:16px;font-weight:500;line-height:1.6;color:var(--mist);display:flex;
+  justify-content:space-between;gap:18px;align-items:baseline;transition:color .3s}
+.news-item h3 .arw{color:var(--slate);transition:transform .3s,color .3s;flex:0 0 auto}
+.news-item:hover{padding-left:12px}
+.news-item:hover h3{color:var(--red)}
+.news-item:hover h3 .arw{transform:translateX(6px);color:var(--red)}
+.news-item p{font-size:13px;color:var(--slate);margin-top:9px;line-height:1.8}
+
+/* ---------- RECRUIT / CTA BANDS ---------- */
+.band{position:relative;overflow:hidden;padding:110px 0}
+.band .glow{position:absolute;inset:0;z-index:0;
+  background:radial-gradient(90% 60% at 78% 118%, rgba(255,46,67,.22), transparent 55%),
+  radial-gradient(70% 50% at 18% -12%, rgba(158,0,32,.16), transparent 60%),
+  linear-gradient(180deg,#140A0D,#1E0E12)}
+.band .rline{position:absolute;left:0;right:0;bottom:26%;height:1px;
+  background:linear-gradient(90deg,transparent,rgba(255,46,67,.5),transparent);z-index:1}
+.band .inner{position:relative;z-index:2}
+.band h2{font-family:"Archivo Expanded",sans-serif;font-weight:800;font-size:clamp(38px,6vw,84px);
+  line-height:1;letter-spacing:-.02em;margin:16px 0 26px}
+.band .lead{font-family:"Zen Kaku Gothic New",sans-serif;font-weight:500;font-size:clamp(19px,2.4vw,28px);
+  line-height:1.7;max-width:640px;margin-bottom:36px}
+.band .btns{display:flex;flex-wrap:wrap;gap:14px}
+
+/* ---------- CONTACT FORM ---------- */
+.form{display:grid;grid-template-columns:1fr;gap:20px;max-width:640px}
+.field label{display:block;font-family:"Archivo",sans-serif;font-size:11px;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--slate);margin-bottom:9px}
+.field input,.field textarea,.field select{width:100%;background:var(--ink-2);border:1px solid var(--line-2);
+  border-radius:3px;color:var(--mist);padding:14px 16px;font-family:inherit;font-size:15px;transition:border-color .25s}
+.field input:focus,.field textarea:focus,.field select:focus{outline:none;border-color:var(--red)}
+.field textarea{min-height:140px;resize:vertical}
+.form .row2{display:grid;grid-template-columns:1fr;gap:20px}
+@media(min-width:600px){.form .row2{grid-template-columns:1fr 1fr}}
+
+/* ---------- FOOTER ---------- */
+.site-footer{border-top:1px solid var(--line);padding:56px 0 40px;background:#070405}
+.foot-top{display:flex;flex-direction:column;gap:30px;margin-bottom:40px}
+@media(min-width:800px){.foot-top{flex-direction:row;justify-content:space-between;align-items:flex-start}}
+.foot-logo{font-family:"Archivo Expanded",sans-serif;font-weight:700;font-size:20px;display:flex;align-items:center;gap:11px}
+.foot-name{color:var(--slate);font-size:12.5px;margin-top:12px}
+.foot-cols{display:flex;flex-wrap:wrap;gap:14px 26px;max-width:560px}
+@media(min-width:800px){.foot-cols{justify-content:flex-end}}
+.foot-cols a{font-size:12.5px;color:var(--slate);transition:color .25s}
+.foot-cols a:hover{color:var(--mist)}
+.foot-bottom{display:flex;justify-content:space-between;align-items:center;padding-top:24px;border-top:1px solid var(--line)}
+.foot-bottom small{font-family:"Archivo",sans-serif;font-size:11px;letter-spacing:.1em;color:var(--slate)}
+.foot-bottom .top{font-family:"Archivo",sans-serif;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--slate)}
+.foot-bottom .top:hover{color:var(--red)}
+
+/* ---------- reveal ---------- */
+.reveal{opacity:0;transform:translateY(26px);
+  transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1)}
+.reveal.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){
+  *{animation:none!important;transition:none!important}
+  .reveal{opacity:1;transform:none}
+  .hero h1 span i{transform:none}
+}
